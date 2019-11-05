@@ -6,6 +6,10 @@ function App() {
 
 	function handleAddSkill(event) {
 		if (event) event.preventDefault();
+		if (skill === '') {
+			alert('You needs add some skill');
+			return null;
+		}
 		setMySkills([...mySkills, skill]);
 		setSkill('');
 	}
